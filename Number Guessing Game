@@ -8,21 +8,22 @@ int main()
     int targetNumber = rand() % 100 + 1;
     int userGuess;
     int attempts = 0;
+    using namespace std;
 
-    std::cout << "Welcome to the Number Guessing Game!" << std::endl;
+       cout << "Welcome to the Number Guessing Game!" <<endl;
 
     while(true){
-        std::cout<<"Guess the number: ";
-        std::cin>> userGuess;
+        cout<<"Guess the number: ";
+        cin>> userGuess;
         attempts++;
 
         if(userGuess < targetNumber){
-            std::cout<< "Too low! Try again."<< std::endl;}
+        cout<< "Too low! Try again."<< endl;}
             else if(userGuess > targetNumber)
             {
-                std::cout<<"TOO high! Try again."<<std::endl;
+                cout<<"TOO high! Try again."<<endl;
             } else{
-                std::cout<< "Congratulation! You guessedthe number" << targetNumber << " in " <<attempts << "attempts."<<std::endl;
+                cout<< "Congratulation! You guessed the number" << targetNumber << " in " <<attempts << "attempts."<<endl;
                 break;
             }
     }
